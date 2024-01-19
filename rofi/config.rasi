@@ -1,0 +1,11 @@
+configuration {
+  display-drun: "Applications:";
+  display-window: "Windows:";
+  drun-display-format: "{icon} {name}";
+  font: "JetBrainsMono Nerd Font 10";
+  modi: "window,drun";
+  show-icons: true;
+  sidebar-mode: true;
+}
+
+@theme "themes/catppuccin-mocha.rasi"

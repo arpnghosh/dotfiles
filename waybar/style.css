@@ -1,0 +1,44 @@
+@import "themes/catppuccin-mocha.css";
+
+* {
+	border: none;
+	border-radius: 5px;
+	min-height: 0;
+	box-shadow: none;
+	font-family: JetBrainsMono Nerd Font;
+  font-weight: bold;
+  text-shadow: none;
+  font-size: 15px;
+}
+
+#waybar {
+  background-color: rgba(0, 0, 0, 0.2);
+  margin-top: 5px;
+}
+
+
+#workspaces {
+  padding-left: 3px;
+  padding-right: 5px;
+  margin: 2px;
+  background: @bg; 
+}
+
+#window {
+	margin-right: 35pt;
+	margin-left: 35pt;
+}
+#custom-power,
+#custom-screenshot,
+#custom-wallchange, 
+#pulseaudio, 
+#backlight,
+#network, 
+#clock, 
+#battery {
+  background: @bg;
+  color: @cg;
+  padding-left: 10px;
+  margin: 2px;
+  padding-right: 10px;
+}
