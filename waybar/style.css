@@ -1,34 +1,78 @@
-@import "themes/catppuccin-mocha.css";
+@import "themes/catppuccin.css";
 
 * {
 	border: none;
-	border-radius: 5px;
 	min-height: 0;
 	box-shadow: none;
 	font-family: JetBrainsMono Nerd Font;
-  font-weight: bold;
   text-shadow: none;
   font-size: 15px;
 }
 
 #waybar {
-  background-color: rgba(0, 0, 0, 0.2);
-  margin-top: 5px;
+  background: rgba(17,17,27,1);
 }
 
-
 #workspaces {
-  padding-left: 3px;
-  padding-right: 5px;
-  margin: 2px;
-  background: @bg; 
+    background: #25253a;
+    margin: 4px 4px;
+    padding: 6px 3px;
+    border-radius: 16px;
+    color: #cba6f7;
+    margin-top: 7px;
+    margin-bottom: 7px;
+}
+
+#workspaces button {
+    padding: 0px 0.5px;
+    margin: 0px 3px;
+    border-radius: 16px;
+    color: transparent;
+    background: rgba(17,17,27,1);
+    transition: all 0.3s ease-in-out;
+}
+
+#workspaces button.active {
+    background-color: #89b4fa;
+    color: #11111B;
+    border-radius: 16px;
+    min-width: 50px;
+    background-size: 400% 400%;
+    transition: all 0.3s ease-in-out;
+}
+
+#workspaces button:hover {
+    background-color: #f5f5f5;
+    color: #11111B;
+    border-radius: 16px;
+    min-width: 50px;
+    background-size: 400% 400%;
 }
 
 #window {
 	margin-right: 35pt;
 	margin-left: 35pt;
 }
-#custom-power,
+
+#custom-arch {
+  background: @bg;
+  padding: 2px 11px 2px 14px;
+  margin: 4px;
+	border-radius: 10px;
+  margin-bottom: 7px;
+  margin-top: 7px;
+}
+
+#custom-power {
+  background: @bg;
+  padding: 2px 14px 2px 11px;
+  margin: 4px;
+	border-radius: 10px;
+  margin-bottom: 7px;
+  margin-top: 7px;
+}
+
+#cava,
 #custom-screenshot,
 #custom-wallchange, 
 #pulseaudio, 
@@ -37,8 +81,9 @@
 #clock, 
 #battery {
   background: @bg;
-  color: @cg;
-  padding-left: 10px;
-  margin: 2px;
-  padding-right: 10px;
+  margin: 4px;
+	border-radius: 10px;
+  margin-bottom: 7px;
+  margin-top: 7px;
+  padding: 4px 10px 4px 10px;
 }

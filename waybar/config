@@ -3,13 +3,12 @@
 	"position": "top",
 
 	"modules-left": [
-    "custom/power",
-    "custom/wallchange",
-		"clock",
+    "custom/arch", 
+    "hyprland/workspaces",
 	],
   
   "modules-center": [
-    "hyprland/workspaces",
+    "cava",
   ],
 
 	"modules-right": [
@@ -17,9 +16,9 @@
     "backlight",
 		"battery",
     "network",
+		"clock",
+    "custom/power",
 	],
-
-	// Modules
 
 	"battery": {
 		"interval": 10,
@@ -28,11 +27,11 @@
 			"critical": 15
 		},
 		"format-time": "{H}:{M:02}",
-		"format": "{icon} {capacity}% ",
-		"format-charging": " {capacity}% ",
-		"format-charging-full": " {capacity}%",
-		"format-full": "{icon} {capacity}%",
-		"format-alt": "{icon} {power}W",
+		"format": "<span color='#b4befe'>{icon}</span>  {capacity}% ",
+		"format-charging": "<span color='#b4befe'></span> {capacity}% ",
+		"format-charging-full": "<span color='#b4befe'></span> {capacity}%",
+		"format-full": "{icon}  {capacity}%",
+		"format-alt": "{icon}  {power}W",
 		"format-icons": [
 			"",
 			"",
@@ -44,73 +43,83 @@
 	},
 
     "clock": {
-        "format": "{:%I:%M %p}",
-        "format-alt": "{:%R 󰃭 %d·%m·%y}",
-        "tooltip-format": "<tt>{calendar}</tt>",
-        "calendar": {
-            "mode": "month",
-            "mode-mon-col": 3,
-            "on-scroll": 1,
-            "on-click-right": "mode",
-            "format": {
-                "months": "<span color='#ffead3'><b>{}</b></span>",
-                "weekdays": "<span color='#ffcc66'><b>{}</b></span>",
-                "today": "<span color='#ff6699'><b>{}</b></span>"
-            }
-        },
-        "actions": {
-            "on-click-right": "mode",
-            "on-click-forward": "tz_up",
-            "on-click-backward": "tz_down",
-            "on-scroll-up": "shift_up",
-            "on-scroll-down": "shift_down"
-        }
-    },
-  "custom/power": {
-    "format": " ",
-    "on-click": "exec wlogout"
-  },
-  
-  "custom/wallchange": {
-        "format": "{}",
-        "on-click": "exec ~/.dotfiles/scripts/wallchange/exec.sh",
+        "format": "<span color='#b4befe'> </span>{:%I:%M %p}",
+        "format-alt": "<span color='#b4befe'> </span>{:%R 󰃭 %d·%m·%y}",
         "tooltip": false
     },
-   
+  
+  "custom/arch": {
+    "format": "<span color='#89b4fa'> </span>",
+    "tooltip":false,
+  },
+
+  "custom/power": {
+    "format": "<span color='#f38ba8'>⏻</span>",
+    "on-click": "exec wlogout",
+    "tooltip":false
+  },
+  
 "network": {
 		"interval": 5,
-		"format-wifi": " {essid}",
+		"format-wifi": "<span color='#b4befe'> </span> {essid}",
 		"format-ethernet": " {ifname}",
-		"format-disconnected": "No connection",
+		"format-disconnected": "<span color='#b4befe'>󰖪 </span>",
 		"format-alt": " {ipaddr}/{cidr}",
 		"tooltip": false
 	},
 
-"hyprland/workspaces": {
-    "all-outputs": true,
-    "format": "{icon}",
-    "format-icons": {
-      "1": "",
-      "2": "",
-      "3": "",
-      "4": "",
-      "5": "",
-      "6": "",
-      "urgent": "",
-      "active": "",
-      "default": ""
-    }
-  },
-
-    "backlight": {
+"cava": {
+        "framerate": 60,
+        "autosens": 1,
+        "bars": 14,
+        "lower_cutoff_freq": 50,
+        "higher_cutoff_freq": 10000,
+        "method": "pipewire",
+        "source": "auto",
+        "stereo": true,
+        "reverse": false,
+        "bar_delimiter": 0,
+        "monstercat": false,
+        "waves": false,
+        "input_delay": 2,
+        "format-icons": [
+        "<span foreground='#b4befe'>▁</span>",
+        "<span foreground='#b4befe'>▂</span>",
+        "<span foreground='#b4befe'>▃</span>",
+        "<span foreground='#b4befe'>▄</span>",
+        "<span foreground='#b4befe'>▅</span>",
+        "<span foreground='#b4befe'>▆</span>",
+        "<span foreground='#b4befe'>▇</span>",
+        "<span foreground='#b4befe'>█</span>"
+      ],      
+    },
+ 
+ "wlr/workspaces": {
+      "active-only": false,
+      "all-outputs": false,
+      "disable-scroll": false,
+      "format": "{name}",
+      "format-icons": {
+        "active": "",
+        "default": "",
+        "sort-by-number": true,
+        "urgent": ""
+      },
+      "on-click": "activate",
+      "on-scroll-down": "hyprctl dispatch workspace e+1",
+      "on-scroll-up": "hyprctl dispatch workspace e-1"
+    },
+  
+  "backlight": {
       "device": "intel_backlight",
       "format": "<span color='#b4befe'>{icon}</span> {percent}%",
-      "format-icons": ["", "", "", "", "", "", "", "", ""]
-    },
+      "format-icons": ["", "", "", "", "", "", "", "", ""],
+      "tooltip": false
+},
 	
   "pulseaudio": {
-		"format": "{icon} {volume}%",
-		"format-bluetooth": "{icon} {volume}%",
+		"format": "<span color='#b4befe'>{icon}</span>  {volume}%",
+		"format-bluetooth": "{icon}  {volume}%",
 		"format-muted": "",
 		"format-icons": {
 			"headphone": "",
@@ -122,9 +131,8 @@
 			"default": ["", ""]
 		},
 		"scroll-step": 1,
-		"on-click": "pactl set-sink-mute @DEFAULT_SINK@ toggle",
+		"on-click": "pavucontrol",
 		"tooltip": false
 	},
 
 }
-

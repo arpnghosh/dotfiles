@@ -7,9 +7,8 @@
     fg-col: #cdd6f4;
     fg-col2: #f38ba8;
     grey: #6c7086;
-
     width: 600;
-    font: "JetBrainsMono Nerd Font 14";
+    font: "Iosevka Nerd Font 15";
 }
 
 element-text, element-icon , mode-switcher {
@@ -21,7 +20,7 @@ window {
     height: 360px;
     border: 3px;
     border-color: @blue;
-	border-radius: 9;
+  	border-radius: 7;
     background-color: @bg-col;
 }
 
@@ -60,8 +59,8 @@ listview {
     border: 0px 0px 0px;
     padding: 6px 0px 0px;
     margin: 10px 0px 0px 20px;
+    lines: 8;
     columns: 2;
-    lines: 5;
     background-color: @bg-col;
 }
 
