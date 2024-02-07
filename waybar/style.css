@@ -10,15 +10,15 @@
 }
 
 #waybar {
-  background: rgba(17,17,27,1);
+  background: @waybar-bg;
 }
 
 #workspaces {
-    background: #25253a;
+    background: @bg;
     margin: 4px 4px;
     padding: 6px 3px;
     border-radius: 16px;
-    color: #cba6f7;
+    color: @workspaces-cl;
     margin-top: 7px;
     margin-bottom: 7px;
 }
@@ -28,13 +28,13 @@
     margin: 0px 3px;
     border-radius: 16px;
     color: transparent;
-    background: rgba(17,17,27,1);
+    background: @workspaces-btn;
     transition: all 0.3s ease-in-out;
 }
 
 #workspaces button.active {
-    background-color: #89b4fa;
-    color: #11111B;
+    background-color: @workspaces-active-bg;
+    color: @workspaces-active-cl;
     border-radius: 16px;
     min-width: 50px;
     background-size: 400% 400%;
@@ -42,8 +42,8 @@
 }
 
 #workspaces button:hover {
-    background-color: #f5f5f5;
-    color: #11111B;
+    background-color: @workspaces-hover-bg;
+    color: @workspaces-hover-cl;
     border-radius: 16px;
     min-width: 50px;
     background-size: 400% 400%;
@@ -58,7 +58,7 @@
   background: @bg;
   padding: 2px 11px 2px 14px;
   margin: 4px;
-	border-radius: 10px;
+  border-radius: 10px;
   margin-bottom: 7px;
   margin-top: 7px;
 }
@@ -81,6 +81,7 @@
 #clock, 
 #battery {
   background: @bg;
+  color: @cg; 
   margin: 4px;
 	border-radius: 10px;
   margin-bottom: 7px;

@@ -2,7 +2,7 @@ configuration {
   display-drun: "Applications:";
   display-window: "Windows:";
   drun-display-format: "{icon} {name}";
-  font: "Iosevka 09";
+  font: "Jetbrains Mono Nerd 09";
   show-icons: true;
 }
 

@@ -8,7 +8,7 @@
     fg-col2: #f38ba8;
     grey: #6c7086;
     width: 600;
-    font: "Iosevka Nerd Font 15";
+    font: "Jetbrains Mono Nerd Font 13";
 }
 
 element-text, element-icon , mode-switcher {

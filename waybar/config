@@ -28,8 +28,8 @@
 		},
 		"format-time": "{H}:{M:02}",
 		"format": "<span color='#b4befe'>{icon}</span>  {capacity}% ",
-		"format-charging": "<span color='#b4befe'></span> {capacity}% ",
-		"format-charging-full": "<span color='#b4befe'></span> {capacity}%",
+		"format-charging": "<span color='#b4befe'> </span> {capacity}% ",
+		"format-charging-full": "<span color='#b4befe'> </span> {capacity}%",
 		"format-full": "{icon}  {capacity}%",
 		"format-alt": "{icon}  {power}W",
 		"format-icons": [
