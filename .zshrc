@@ -1,13 +1,9 @@
-# alias
 alias nv='nvim'
-alias sw='swww'
-alias hx='helix'
 alias rn='ranger'
-alias gmc='git commit -m'
-alias gs='git status'
-alias ga='git add'
-alias gl='git log'
-alias gi='git init'
+
+alias ts='tmux ls'
+alias tc='tmux new-session -t'
+alias ta='tmux attach-session -t'
 
 source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 
