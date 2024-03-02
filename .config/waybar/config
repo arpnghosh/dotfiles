@@ -26,9 +26,9 @@
 			"critical": 15
 		},
 		"format-time": "{H}:{M:02}",
-		"format": "<span color='#111111'>{icon}</span>  {capacity}% ",
-		"format-charging": "<span color='#111111'> </span> {capacity}% ",
-		"format-charging-full": "<span color='#111111'> </span> {capacity}%",
+		"format": "<span color='#f5e0dc'>{icon}</span>  {capacity}%",
+		"format-charging": "<span color='#f5e0dc'> </span> {capacity}%",
+		"format-charging-full": "<span color='#f5e0dc'> </span> {capacity}%",
 		"format-full": "{icon}  {capacity}%",
 		"format-alt": "{icon}  {power}W",
 		"format-icons": [
@@ -41,47 +41,27 @@
 		"tooltip": false
 	},
      "clock": {
-  "format": "<span color='#111111'>  </span>{:%I:%M %p}",
+  "format": "<span color='#f5e0dc'>  </span>{:%I:%M %p}",
   "format-alt": "{:%A, %B %d, %Y (%R)}",
-  "tooltip-format": "<tt><small>{calendar}</small></tt>",
-  "calendar": {
-              "mode"          : "year",
-              "mode-mon-col"  : 3,
-              "weeks-pos"     : "right",
-              "on-scroll"     : 1,
-              "on-click-right": "mode",
-              "format": {
-                        "months":     "<span color='#ffead3'><b>{}</b></span>",
-                        "days":       "<span color='#ecc6d9'><b>{}</b></span>",
-                        "weeks":      "<span color='#99ffdd'><b>W{}</b></span>",
-                        "weekdays":   "<span color='#ffcc66'><b>{}</b></span>",
-                        "today":      "<span color='#ff6699'><b><u>{}</u></b></span>"
-                        }
-              },
-  "actions":  {
-              "on-click-right": "mode",
-              "on-click-forward": "tz_up",
-              "on-click-backward": "tz_down",
-              "on-scroll-up": "shift_up",
-              "on-scroll-down": "shift_down"
-              }
+  "tooltip-format": false, 
 }, 
-  "custom/arch": {
-    "format": "<span color='#111111'> </span>",
+ 
+ "custom/arch": {
+    "format": "<span color='#f5e0dc'> </span>",
     "tooltip":false,
   },
 
   "custom/power": {
-    "format": "<span color='#111111'>⏻</span>",
+    "format": "<span color='#f5e0dc'>⏻</span>",
     "on-click": "exec wlogout",
     "tooltip":false
   },
   
 "network": {
 		"interval": 5,
-		"format-wifi": "<span color='#111111'> </span> {essid}",
+		"format-wifi": "<span color='#f5e0dc'> </span> {essid}",
 		"format-ethernet": "{ifname}",
-		"format-disconnected": "<span color='#111111'>󰖪 </span>",
+		"format-disconnected": "<span color='#ffffff'>󰖪 </span>",
 		"format-alt": "{ipaddr}/{cidr}",
 		"tooltip": false
 	},
@@ -104,13 +84,13 @@
   
   "backlight": {
       "device": "intel_backlight",
-      "format": "<span color='#111111'>{icon}</span> {percent}%",
+      "format": "<span color='#f5e0dc'>{icon} </span>{percent}%",
       "format-icons": ["", "", "", "", "", "", "", "", ""],
       "tooltip": false
 },
 	
   "pulseaudio": {
-		"format": "<span color='#111111'>{icon}</span> {volume}%",
+		"format": "<span color='#f5e0dc'>{icon} </span> {volume}%",
 		"format-bluetooth": "{icon}  {volume}%",
 		"format-muted": "",
 		"format-icons": {

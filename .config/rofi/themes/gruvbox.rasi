@@ -20,7 +20,7 @@ window {
     height: 360px;
     border: 3px;
     border-color: @blue;
-	border-radius: 9;
+   	border-radius: 9;
     background-color: @bg-col;
 }
 

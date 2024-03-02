@@ -6,4 +6,4 @@ configuration {
   show-icons: true;
 }
 
-@theme "themes/catppuccin-mocha.rasi"
+@theme "themes/mountain.rasi"

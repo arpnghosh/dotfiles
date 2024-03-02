@@ -1,22 +1,25 @@
+@import "themes/mountain.css";
+
 * {
 	border: none;
 	min-height: 0;
 	box-shadow: none;
-	font-family: Iosevka; 
+  font-weight: bold;	
+  font-family: Iosevka; 
   text-shadow: none;
-  font-size: 15px;
+  font-size: 16px;
 }
 
 #waybar {
-  background: #11111b;
+  background: @waybar-bg;
 }
 
 #workspaces {
-    background: #25253a;
+    background: @bg;
     margin: 4px 4px;
     padding: 6px 3px;
     border-radius: 16px;
-    color: #cba6f7;
+    color: @workspaces-al;
     margin-top: 7px;
     margin-bottom: 7px;
 }
@@ -26,13 +29,13 @@
     margin: 0px 3px;
     border-radius: 16px;
     color: transparent;
-    background: rgba(17,17,27,1);
+    background: @workspaces-btn;
     transition: all 0.3s ease-in-out;
 }
 
 #workspaces button.active {
-    background-color: #89b4fa; 
-    color: #11111b;
+    background-color: @workspaces-active-bg; 
+    color: @workspaces-active-cl;
     border-radius: 16px;
     min-width: 50px;
     background-size: 400% 400%;
@@ -48,7 +51,7 @@
 }
 
 #custom-arch {
-  background: #89dceb;
+  background: @bg;
   padding: 2px 11px 2px 14px;
   margin: 4px;
   border-radius: 10px;
@@ -57,7 +60,7 @@
 }
 
 #custom-power {
-  background: #f38ba8; 
+  background: @bg; 
   padding: 2px 14px 2px 11px;
   margin: 4px;
 	border-radius: 10px;
@@ -75,29 +78,6 @@
   margin-bottom: 7px;
   margin-top: 7px;
   padding: 4px 10px 4px 10px;
-}
-
-#battery {
-  background: #cba6f7;
-  color: #111111; 
-}
-
-#pulseaudio {
-  background: #89b4fa;
-  color: #111111; 
-}
-
-#backlight{
-  background: #f5c2e7;
-  color: #111111; 
-}
-
-#clock{
-  background: #f5c2e7;
-  color: #111111; 
-}
-
-#network {
-  background: #a6e3a1;
-  color: #111111; 
+  background: @bg;
+  color: @cg; 
 }
