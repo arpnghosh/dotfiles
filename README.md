@@ -7,7 +7,7 @@ This repo contains the configuration files for several programs that I run on my
 - use stow to create symlinks
 
 ``` 
-git clone https://github.com/uwukun/dotfiles ~/.dotfiles
+git clone https://github.com/aw4ki/dotfiles ~/.dotfiles
 cd .dotfiles
 stow .
 ```
