@@ -6,4 +6,4 @@ configuration {
   show-icons: true;
 }
 
-@theme "themes/mountain.rasi"
+@theme "themes/gruvbox.rasi"

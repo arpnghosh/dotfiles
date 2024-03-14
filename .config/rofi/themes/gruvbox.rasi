@@ -3,7 +3,7 @@
     bg-col-light: #282828;
     border-col: #282828;
     selected-col: #282828;
-    blue: #427b58;
+    green: #427b58;
     fg-col: #cdd6f4;
     fg-col2: #f38ba8;
     grey: #6c7086;
@@ -19,8 +19,8 @@ element-text, element-icon , mode-switcher {
 window {
     height: 360px;
     border: 3px;
-    border-color: @blue;
-   	border-radius: 9;
+    border-color: @green;
+   	border-radius: 0;
     background-color: @bg-col;
 }
 
@@ -36,7 +36,7 @@ inputbar {
 }
 
 prompt {
-    background-color: @blue;
+    background-color: @green;
     padding: 6px;
     text-color: @bg-col;
     border-radius: 3px;
@@ -93,7 +93,7 @@ button {
 
 button selected {
   background-color: @bg-col;
-  text-color: @blue;
+  text-color: @green;
 }
 
 message {
@@ -106,6 +106,6 @@ message {
 textbox {
     padding: 6px;
     margin: 20px 0px 0px 20px;
-    text-color: @blue;
+    text-color: @green;
     background-color: @bg-col-light;
 }

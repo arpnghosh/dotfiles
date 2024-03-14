@@ -5,6 +5,7 @@
     blue: #89b4fa;
     white: #ffffff;
     pink: #ac8a8c; 
+    mauve: #bd93f9;
     fg-col: #cdd6f4;
     fg-col2: #f38ba8;
     grey: #6c7086;
@@ -20,8 +21,8 @@ element-text, element-icon , mode-switcher {
 window {
     height: 360px;
     border: 2px;
-    border-color: @pink;
-  	border-radius: 7;
+    border-color: @mauve;
+  	border-radius: 5;
     background-color: @bg-col;
 }
 

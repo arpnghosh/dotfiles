@@ -18,7 +18,8 @@ element-text, element-icon , mode-switcher {
 window {
     height: 360px;
     border-color: @blue;
-  	border-radius: 7;
+    border: 2px;
+  	border-radius: 0;
     background-color: @bg-col;
 }
 
