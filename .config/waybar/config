@@ -16,6 +16,7 @@
     "backlight",
 		"battery",
     "network",
+    "tray",
     "custom/power",
 	],
 
@@ -40,9 +41,15 @@
 		],
 		"tooltip": false
 	},
-     "clock": {
-  "format": "<span color='#f5e0dc'>  </span>{:%I:%M %p}",
-  "format-alt": "{:%A, %B %d, %Y (%R)}",
+
+  "tray": {
+    "icon-size": 21,
+    "spacing": 10
+},
+
+  "clock": {
+  "format-alt": "<span color='#f5e0dc'>  </span>{:%I:%M %p}",
+  "format": "{:%A, %B %d, %Y, %R}",
   "tooltip-format": false, 
 }, 
  
