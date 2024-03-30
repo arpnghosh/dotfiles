@@ -5,6 +5,6 @@ alias nv 'nvim'
 alias rn 'ranger'
 
 alias ts 'tmux ls'
-alias tc 'tmux new-session -t'
-alias ta 'tmux attach-session -t'
+alias tc 'tmux -u new-session -t'
+alias ta 'tmux -u attach-session -t'
 alias nifi 'nmcli device wifi connect'
