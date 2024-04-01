@@ -1,9 +1,9 @@
 set adjust-open "best-fit"
-set default-bg "#1a1e2a" #00
+set default-bg "#11111b" #00
 set default-fg "#F7F7F6" #01
 
 set statusbar-fg "#ffffff" #04
-set statusbar-bg "#1a1e2a" #01
+set statusbar-bg "#000000" #01
 
 set highlight-color "#5294E2" #0A
 set highlight-active-color "#6A9FB5" #0D
@@ -12,8 +12,8 @@ set notification-bg "#90A959" #0B
 set notification-fg "#151515" #00
 
 set guioptions v
-/* set recolor "true" */
-set recolor-lightcolor "#1a1e2a"
+set recolor "true"
+set recolor-lightcolor "#11111b"
 set recolor-darkcolor "#ffffff"
 set recolor-keephue "true"
 set selection-clipboard clipboard

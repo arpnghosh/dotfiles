@@ -1,0 +1,13 @@
+@define-color waybar-bg transparent;
+
+@define-color workspaces-cl #2c2e2f;
+@define-color workspaces-btn #ffffff;
+
+@define-color workspaces-active-bg #ffffff;
+@define-color workspaces-active-cl #0c0e0f;
+
+@define-color workspaces-hover-bg #ffffff;
+@define-color workspaces-hover-cl #11111b;
+
+@define-color bg #000000;
+@define-color cg #ffffff;

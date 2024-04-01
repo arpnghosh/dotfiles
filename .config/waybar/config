@@ -27,9 +27,9 @@
 			"critical": 15
 		},
 		"format-time": "{H}:{M:02}",
-		"format": "<span color='#f5e0dc'>{icon}</span>  {capacity}%",
-		"format-charging": "<span color='#f5e0dc'> </span> {capacity}%",
-		"format-charging-full": "<span color='#f5e0dc'> </span> {capacity}%",
+		"format": "<span color='#ffffff'>{icon}</span>  {capacity}%",
+		"format-charging": "<span color='#ffffff'> </span> {capacity}%",
+		"format-charging-full": "<span color='#ffffff'> </span> {capacity}%",
 		"format-full": "{icon}  {capacity}%",
 		"format-alt": "{icon}  {power}W",
 		"format-icons": [
@@ -48,25 +48,26 @@
 },
 
   "clock": {
-  "format-alt": "<span color='#f5e0dc'>  </span>{:%I:%M %p}",
+  "format-alt": "<span color='#ffffff'>🕓 </span>{:%I:%M %p}",
   "format": "{:%A, %B %d, %Y, %R}",
   "tooltip-format": false, 
 }, 
  
  "custom/arch": {
-    "format": "<span color='#f5e0dc'> </span>",
+    "format": "<span color='#ffffff'> </span>",
     "tooltip":false,
+    "on-click": "exec rofi -show drun",
   },
 
   "custom/power": {
-    "format": "<span color='#f5e0dc'>⏻</span>",
+    "format": "<span color='#ffffff'>⏻</span>",
     "on-click": "exec wlogout",
     "tooltip":false
   },
   
 "network": {
 		"interval": 5,
-		"format-wifi": "<span color='#f5e0dc'> </span> {essid}",
+		"format-wifi": "<span color='#ffffff'> </span> {essid}",
 		"format-ethernet": "{ifname}",
 		"format-disconnected": "<span color='#ffffff'>󰖪 </span>",
 		"format-alt": "{ipaddr}/{cidr}",
@@ -91,27 +92,27 @@
   
   "backlight": {
       "device": "intel_backlight",
-      "format": "<span color='#f5e0dc'>{icon} </span>{percent}%",
+      "format": "<span color='#ffffff'>{icon} </span>{percent}%",
       "format-icons": ["", "", "", "", "", "", "", "", ""],
       "tooltip": false
 },
 	
   "pulseaudio": {
-		"format": "<span color='#f5e0dc'>{icon} </span> {volume}%",
+		"format": "<span color='#ffffff'>{icon}</span> {volume}%",
 		"format-bluetooth": "{icon}  {volume}%",
 		"format-muted": "",
 		"format-icons": {
-			"headphone": "",
-			"hands-free": "",
-			"headset": "",
-			"phone": "",
-			"portable": "",
+			"headphone": "☊",
+			"hands-free": "󰕾",
+			"headset": "󰕾",
+			"phone": "󰕾",
+			"portable": "󰕾",
 			"car": "",
-			"default": ["", ""]
+			"default": ["󰕾", "󰕾"]
 		},
 		"scroll-step": 1,
 		"on-click": "pavucontrol",
 		"tooltip": false
-	},
+	}, 
 
 }
