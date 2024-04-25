@@ -1,0 +1,134 @@
+{
+	"layer": "top",
+	"position": "top",
+	"modules-left": [
+		"custom/arch",
+		"temperature",
+		"cpu",
+		"memory"
+	],
+	"modules-center": [
+		"hyprland/workspaces"
+	],
+	"modules-right": [
+		"tray",
+		"pulseaudio",
+		"backlight",
+		"battery",
+		"network",
+		"clock"
+	],
+	"custom/arch": {
+		"format": "<span color='#89b4fa'> </span>",
+		"tooltip": false,
+		"on-click": "exec rofi -show drun"
+	},
+	"disk": {
+		"interval": 30,
+		"format": "{used} / {total}"
+	},
+	"clock": {
+		"format": "<span color='#89b4fa'></span> {:%I:%M %p}",
+		"format-alt": "{:%A, %B %d, %Y, %R}",
+		"tooltip-format": false
+	},
+	"network": {
+		"interval": 5,
+		"format-wifi": "<span color='#cba6fa'> </span> {essid}",
+		"format-ethernet": "{ifname}",
+		"format-disconnected": "<span color='#ffffff'>󰖪 </span>",
+		"format-alt": "{ipaddr}/{cidr}",
+		"tooltip": false
+	},
+	"hyprland/workspaces": {
+		"format": "{name}",
+		"tooltip": false,
+		"all-outputs": true,
+		"persistent-workspaces": {
+			"1": [],
+			"2": [],
+			"3": [],
+			"4": [],
+			"5": []
+		}
+	},
+	"pulseaudio": {
+		"format": "<span color='#89dceb'>{icon} </span>{volume}%",
+		"format-bluetooth": "{icon} {volume}%",
+		"format-muted": "",
+		"format-icons": {
+			"headphone": "☊",
+			"hands-free": "󰕾",
+			"headset": "☊",
+			"phone": "󰕾",
+			"portable": "󰕾",
+			"car": "",
+			"default": [
+				"󰕾",
+				"󰕾"
+			]
+		},
+		"scroll-step": 1,
+		"on-click": "pavucontrol",
+		"tooltip": false
+	},
+	"backlight": {
+		"device": "intel_backlight",
+		"format": "<span color='#f9e2af'>{icon} </span>{percent}%",
+		"format-icons": [
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			""
+		],
+		"tooltip": false
+	},
+	"battery": {
+		"interval": 10,
+		"states": {
+			"warning": 30,
+			"critical": 15
+		},
+		"format-time": "{H}:{M:02}",
+		"format": "<span color='#a6e2af'>{icon} </span> {capacity}%",
+		"format-charging": "<span color='#a6e2af'> </span> {capacity}%",
+		"format-charging-full": "<span color='#a6e2af'> </span> {capacity}%",
+		"format-full": "{icon}  {capacity}%",
+		"format-alt": "{icon}  {power}W",
+		"format-icons": [
+			"",
+			"",
+			"",
+			"",
+			""
+		],
+		"tooltip": false
+	},
+	"temperature": {
+		"format": " {temperatureC}°C"
+	},
+	"memory": {
+		"interval": 30,
+		"format": "  {}%",
+		"max-length": 10
+	},
+	"cpu": {
+		"interval": 10,
+		"format": "  {}%",
+		"max-length": 10
+	},
+	"tray": {
+		"icon-size": 18,
+		"spacing": 10
+	},
+	"custom/power": {
+		"format": "<span color='#ffffff'>⏻</span>",
+		"on-click": "exec wlogout",
+		"tooltip": false
+	}
+}
