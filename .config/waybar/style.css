@@ -8,7 +8,7 @@
 }
 
 #waybar {
-  background: #11111b;
+  background: rgba(0,0,0,0.5);
 }
 
 #custom-arch {
@@ -34,7 +34,7 @@
 {
   margin: 7px 0px 7px 0px;
   padding: 4px 10px 4px 10px;
-  background: #1e1e2e;
+  background: #11111b;
 }
 
 #cpu{
@@ -49,19 +49,18 @@
 }
 
 #workspaces {
-  background: #1e1e2e;
   margin: 7px 15px 7px 10px;
   padding: 6px 3px;
   border-radius: 16px;
-  color: #0c0e0f;
+  background: #000000;
 }
 
 #workspaces button {
   padding: 0px 0.5px;
   margin: 0px 3px;
   border-radius: 16px;
-  background: #11111b;
-  color: #0c0e0f;
+  background: #404040;
+  color: #404040;
 }
 
 #workspaces button.active {
@@ -98,7 +97,7 @@
 {
   margin: 7px 0px 7px 0px;
   padding: 4px 10px 4px 10px;
-  background: #1e1e2e;
+  background: #11111b;
 }
 
 #battery
@@ -126,7 +125,7 @@
 {
   margin: 7px 0px 7px 0px;
   padding: 4px 10px 4px 10px;
-  background: #1e1e2e;
+  background: #11111b;
 }
 
 #clock
@@ -135,5 +134,3 @@
   border-radius: 0 16px 16px 0;
   margin-right: 15px;
 }
-
-
