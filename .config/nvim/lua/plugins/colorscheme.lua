@@ -7,12 +7,12 @@ return {
 		"ellisonleao/gruvbox.nvim",
 		priority = 1000,
 		config = true,
-		--    		opts = {
-		--			overrides = {
-		--				Normal = { bg = "#282828" },
-		--				SignColumn = { bg = "#282828" },
-		--			},
-		--		},
+		opts = {
+			overrides = {
+				Normal = { bg = "#0f0f0f" },
+				SignColumn = { bg = "#0f0f0f" },
+			},
+		},
 	},
 
 	{ "nyoom-engineering/oxocarbon.nvim" },
@@ -20,10 +20,6 @@ return {
 	{ "rose-pine/neovim", name = "rose-pine" },
 
 	{ "neanias/everforest-nvim" },
-
-	{ "gbprod/nord.nvim" },
-
-	{ "baliestri/aura-theme" },
 
 	{
 		"folke/tokyonight.nvim",
@@ -38,11 +34,12 @@ return {
 			name = "catppuccin",
 			opts = {
 				flavour = "mocha",
+				transparent_background = true,
 				color_overrides = {
 					mocha = {
-						base = "#000000",
-						mantle = "#000000",
-						crust = "#000000",
+						base = "#11111b",
+						mantle = "#11111b",
+						crust = "#11111b",
 					},
 				},
 			},

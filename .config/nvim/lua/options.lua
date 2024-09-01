@@ -1,7 +1,7 @@
 vim.g.have_nerd_font = true
-vim.o.guifont = "JetBrainsMono NFM:h12"
+vim.o.guifont = "JetBrainsMono NFM:h15"
+vim.o.background = "dark"
 vim.cmd.colorscheme("retrobox")
-
 vim.opt.number = true
 vim.opt.mouse = "a"
 vim.opt.showmode = false
@@ -18,5 +18,6 @@ vim.opt.splitbelow = true
 vim.opt.list = true
 vim.opt.listchars = { tab = "» ", trail = "·", nbsp = "␣" }
 vim.opt.inccommand = "split"
-vim.opt.cursorline = true
+vim.opt.cursorline = false
 vim.opt.scrolloff = 10
+vim.opt.termguicolors = true
