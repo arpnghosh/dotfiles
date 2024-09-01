@@ -1,14 +1,3 @@
-<h1 align="center">Dotfiles</h1>
-
-![preview](./assets/preview.png)
-
-### Installation
-```
-git clone https://github.com/retrovoxel/dotfiles ~/.dotfiles
-cd .dotfiles
-stow .
-```
-
 ### Programs
 - OS: [Arch Linux](https://archlinux.org/)
 - WM: [Hyprland](https://hyprland.org/)
@@ -19,6 +8,15 @@ stow .
 - Editor: [Neovim](https://neovim.io/)
 - Colorscheme: [catppuccin mocha](https://github.com/catppuccin/catppuccin) & [oxocarbon](https://github.com/nyoom-engineering/oxocarbon.nvim)
 - Font: [Iosevka](https://github.com/be5invis/Iosevka) & [JetbrainsMono Nerd](https://www.jetbrains.com/lp/mono/)
+
+![Setup](./assets/preview.png)
+
+### Usage
+```
+git clone https://github.com/arpnghosh/dotfiles ~/.dotfiles
+cd .dotfiles
+stow .
+```
 
 ### Acknowledgements
 - [Aylur](https://github.com/aylur) for their ags configurations
