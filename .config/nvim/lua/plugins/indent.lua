@@ -1,8 +1,19 @@
 return {
 	"lukas-reineke/indent-blankline.nvim",
 	main = "ibl",
-	opts = {},
-	config = function()
-		require("ibl").setup()
-	end,
+	event = "UIEnter",
+	opts = {
+		exclude = {
+	       -- stylua: ignore
+	       filetypes = {
+	         'dbout', 'neo-tree-popup', 'log', 'gitcommit',
+	         'txt', 'help', 'NvimTree', 'git', 'flutterToolsOutline',
+	         'undotree', 'markdown', 'norg', 'org', 'orgagenda',
+	       },
+		},
+		indent = {
+			char = "│", -- ▏┆ ┊ 
+			tab_char = "│",
+		},
+	},
 }

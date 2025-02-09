@@ -15,7 +15,7 @@ return {
 			lua = { "stylua" },
 			json = { "jq" },
 			python = { "isort", "black" },
-			javascript = { { "prettierd", "prettier" } },
+			javascript = { "prettierd", "prettier", stop_after_first = true },
 		},
 	},
 }
