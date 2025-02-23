@@ -1,5 +1,7 @@
 # This file contains fish universal variable definitions.
 # VERSION: 3.0
+SETUVAR --export --path GOPATH:/home/awaki/go
+SETUVAR --export --path PATH:/home/awaki/go/bin\x1e/home/awaki/\x2ebun/bin\x1e/home/awaki/\x2elocal/bin\x1e/nix/var/nix/profiles/default/bin\x1e/home/awaki/\x2elocal/share/nvm/v20\x2e12\x2e0/bin\x1e/home/awaki/\x2ebun/bin\x1e/home/awaki/\x2edeno/bin\x1e/home/awaki/\x2ecargo/bin\x1e/home/awaki/\x2enix\x2dprofile/bin\x1e/usr/local/sbin\x1e/usr/local/bin\x1e/usr/bin\x1e/var/lib/flatpak/exports/bin\x1e/usr/lib/jvm/default/bin\x1e/usr/bin/site_perl\x1e/usr/bin/vendor_perl\x1e/usr/bin/core_perl\x1e/usr/lib/rustup/bin\x1efish_user_paths\x1e/home/awaki/\x2ecargo/bin\x1e/home/awaki/\x2elocal/share/nvm/v20\x2e12\x2e0/bin\x1efish_user_paths\x1e/home/awaki/\x2ecargo/bin
 SETUVAR __fish_initialized:3400
 SETUVAR fish_color_autosuggestion:brblack
 SETUVAR fish_color_cancel:\x2dr
@@ -24,7 +26,7 @@ SETUVAR fish_color_status:red
 SETUVAR fish_color_user:brgreen
 SETUVAR fish_color_valid_path:\x2d\x2dunderline
 SETUVAR fish_cursor_default:line
-SETUVAR fish_key_bindings:fish_default_key_bindings
+SETUVAR fish_key_bindings:fish_vi_key_bindings
 SETUVAR fish_pager_color_completion:normal
 SETUVAR fish_pager_color_description:yellow\x1e\x2di
 SETUVAR fish_pager_color_prefix:normal\x1e\x2d\x2dbold\x1e\x2d\x2dunderline
