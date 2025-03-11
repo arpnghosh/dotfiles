@@ -1,5 +1,4 @@
 local opt = vim.opt
-local cmd = vim.cmd
 
 opt.guifont = "SFMono Nerd Font"
 opt.wrap = true
@@ -21,5 +20,4 @@ opt.termguicolors = true
 opt.swapfile = false
 
 opt.cinoptions:append(":0")
-
-cmd([[colorscheme base16-tomorrow-night]])
+-- opt.colorcolumn = "80"
