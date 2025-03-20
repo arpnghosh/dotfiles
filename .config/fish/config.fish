@@ -1,14 +1,9 @@
 set fish_greeting
 
 starship init fish | source
-# enable_transience
 
 alias v nvim
 alias y yazi
-alias h helix
-alias z zathura
-alias ff firefox
-alias zd zeditor
 
 alias la 'ls -a'
 alias ll 'ls -l'
@@ -29,6 +24,7 @@ alias nifi 'nmcli device wifi connect'
 alias vv 'cd (cd ~/Documents/code && ls -d */ | fzf) && nvim .'
 alias zz 'cd (cd ~/Documents/code && ls -d */ | fzf) && zeditor .'
 
+fish_vi_key_bindings
 # Set cursor style based on vi mode
 function fish_vi_cursor --on-variable fish_bind_mode
     switch $fish_bind_mode
@@ -44,6 +40,11 @@ end
 set PATH $PATH $HOME/.local/share/nvm/v20.12.0/bin
 set PATH $PATH fish_user_paths $HOME/.cargo/bin
 set -Ux fish_user_paths $HOME/.local/bin $fish_user_paths
+
+set -Ux fish_user_paths $HOME/.config/emacs/bin
+
+set -Ux LUA_PATH "/usr/local/share/lua/5.4/?.lua;/usr/local/share/lua/5.4/?/init.lua;;"
+set -Ux LUA_CPATH "/usr/local/lib/lua/5.4/?.so;;"
 
 # bun
 set --export BUN_INSTALL "$HOME/.bun"
