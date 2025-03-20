@@ -1,0 +1,32 @@
+background = #151515
+foreground = #b2b5b3
+
+palette = 0=#373839
+palette = 8=#313234
+
+palette = 1=#e55f86
+palette = 9=#d15577
+
+palette = 2=#00D787
+palette = 10=#43c383
+
+palette = 3=#EBFF71
+palette = 11=#d8e77b
+
+palette = 4=#50a4e7
+palette = 12=#4886c8
+
+palette = 5=#9076e7
+palette = 13=#8861dd
+
+palette = 6=#50e6e6
+palette = 14=#43c3c3
+
+palette = 7=#e7e7e7
+palette = 15=#c1c4c2
+
+cursor-color = #eaeaea
+cursor-text = #373839
+
+selection-background = #EBFF71
+selection-foreground = #313234
