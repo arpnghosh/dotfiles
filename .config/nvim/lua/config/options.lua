@@ -18,6 +18,6 @@ opt.shiftwidth = 4
 opt.expandtab = true
 opt.termguicolors = true
 opt.swapfile = false
-
 opt.cinoptions:append(":0")
+opt.background = "dark"
 -- opt.colorcolumn = "80"

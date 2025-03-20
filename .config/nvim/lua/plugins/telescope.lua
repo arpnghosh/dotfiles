@@ -45,8 +45,7 @@ return {
 
 		pcall(require("telescope").load_extension, "fzf")
 		pcall(require("telescope").load_extension, "ui-select")
-		-- start
-		-- See `:help telescope.builtin`
+
 		local builtin = require("telescope.builtin")
 		vim.keymap.set("n", "<leader>fh", builtin.help_tags, { desc = "[S]earch [H]elp" })
 		vim.keymap.set("n", "<leader>fk", builtin.keymaps, { desc = "[S]earch [K]eymaps" })
@@ -59,17 +58,13 @@ return {
 		vim.keymap.set("n", "<leader><leader>", builtin.buffers, { desc = "[ ] Find existing buffers" })
 		vim.keymap.set("n", "<leader>th", builtin.colorscheme, { desc = "[ ] switch colorscheme" })
 
-		-- Slightly advanced example of overriding default behavior and theme
 		vim.keymap.set("n", "<leader>/", function()
-			-- You can pass additional configuration to Telescope to change the theme, layout, etc.
 			builtin.current_buffer_fuzzy_find(require("telescope.themes").get_dropdown({
 				winblend = 10,
 				previewer = false,
 			}))
 		end, { desc = "[/] Fuzzily search in current buffer" })
 
-		-- It's also possible to pass additional configuration options.
-		--  See `:help telescope.builtin.live_grep()` for information about particular keys
 		vim.keymap.set("n", "<leader>f/", function()
 			builtin.live_grep({
 				grep_open_files = true,
@@ -77,13 +72,12 @@ return {
 			})
 		end, { desc = "[S]earch [/] in Open Files" })
 
-		-- Shortcut for searching your Neovim configuration files
 		vim.keymap.set("n", "<leader>fn", function()
 			builtin.find_files({ cwd = vim.fn.stdpath("config") })
 		end, { desc = "[S]earch [N]eovim files" })
 
 		vim.keymap.set("n", "<leader>fs", function()
 			builtin.lsp_document_symbols({ symbols = "function" })
-		end, { desc = "[S]earch function in current buffer" })
+		end, { desc = "[S]earch functions in current buffer" })
 	end,
 }

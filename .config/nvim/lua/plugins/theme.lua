@@ -1,12 +1,51 @@
 return {
 	{
+		"rebelot/kanagawa.nvim",
+		config = function()
+			require("kanagawa").setup({
+				compile = false, -- enable compiling the colorscheme
+				undercurl = true, -- enable undercurls
+				commentStyle = { italic = false },
+				functionStyle = {},
+				keywordStyle = { italic = false },
+				statementStyle = { bold = false },
+				typeStyle = {},
+				transparent = false, -- do not set background color
+				dimInactive = false, -- dim inactive window `:h hl-NormalNC`
+				terminalColors = true,
+				overrides = function(colors) -- add/modify highlights
+					return {}
+				end,
+				colors = {
+					theme = {
+						all = {
+							ui = {
+								bg_gutter = "none",
+							},
+						},
+					},
+				},
+				theme = "wave", -- Load "wave" theme
+				background = {
+					dark = "wave",
+					light = "lotus",
+				},
+			})
+			if vim.o.background == "dark" then
+				vim.cmd([[colorscheme kanagawa]])
+			else
+				vim.cmd([[colorscheme catppuccin-latte]])
+			end
+		end,
+	},
+	{
 		"catppuccin/nvim",
 		name = "catppuccin",
 		priority = 1000,
 		config = function()
 			require("catppuccin").setup({
-				floavour = "mocha",
-				no_italic = true,
+				floavour = "latte",
+				no_italic = false,
 				transparent_background = false,
 				custom_highlights = function(colors)
 					return {
@@ -49,11 +88,6 @@ return {
 						mantle = "#111111",
 						crust = "#0a0a0a",
 					},
-					latte = {
-						base = "#fafafa",
-						mantle = "#e7e8e9",
-						crust = "#d3d4d5",
-					},
 				},
 				integrations = {
 					gitsigns = true,
@@ -61,16 +95,14 @@ return {
 					treesitter = true,
 				},
 			})
-			vim.cmd([[colorscheme catppuccin]])
 		end,
 	},
-
 	{
 		"sainnhe/gruvbox-material",
 		config = function()
-			vim.o.background = "dark"
+			-- vim.o.background = "dark"
 			vim.cmd("let g:gruvbox_material_background= 'hard'")
-			vim.cmd("let g:gruvbox_material_transparent_background = 1")
+			vim.cmd("let g:gruvbox_material_transparent_background = 0")
 			vim.cmd("let g:gruvbox_material_disable_italic_comment = 1")
 			vim.cmd("let g:gruvbox_material_diagnostic_line_highlight=1")
 			vim.cmd("let g:gruvbox_material_diagnostic_virtual_text='colored'")
