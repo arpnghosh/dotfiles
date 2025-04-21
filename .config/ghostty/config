@@ -1,20 +1,28 @@
 font-family = Liga SFMono Nerd Font
+theme = catppuccin-mocha
 font-size = 15
 
-# theme = catppuccin-latte
-# background-opacity=0.95
-theme = Kanagawa Wave
+background-opacity = 1.0
+unfocused-split-opacity = 1
 
 shell-integration = fish
-unfocused-split-opacity = 1
-adjust-cell-height = "5%"
-window-theme = "ghostty"
-window-padding-color = background
-cursor-style = block
-window-decoration = true 
-gtk-wide-tabs = false
+adjust-cell-height = "10%"
 
-keybind = ctrl+shift+j=new_split:down
-keybind = ctrl+shift+k=new_split:up
-keybind = ctrl+shift+h=new_split:left
-keybind = ctrl+shift+l=new_split:right
+window-theme = "ghostty"
+window-padding-x = 5, 5
+window-padding-y = 10,10 
+window-padding-color = background
+
+mouse-hide-while-typing = true
+cursor-style = block
+window-decoration = true
+gtk-titlebar = true
+gtk-wide-tabs = true
+
+keybind = ctrl+shift+j=goto_split:bottom
+keybind = ctrl+shift+k=goto_split:top
+keybind = ctrl+shift+h=goto_split:left
+keybind = ctrl+shift+l=goto_split:right
+
+keybind = ctrl+s>;=new_split:right
+keybind = ctrl+s>/=new_split:down
