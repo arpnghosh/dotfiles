@@ -10,12 +10,18 @@ return {
 			}
 		end,
 		formatters_by_ft = {
+			c = { "clang-format" },
 			cpp = { "clang-format" },
-			go = { "gofumpt" },
 			lua = { "stylua" },
 			json = { "jq" },
-			python = { "isort", "black" },
-			javascript = { "prettierd", "prettier", stop_after_first = true },
+			jsonc = { "jq" },
+			python = { "black" },
+			go = { "gofumpt" },
+			html = { "prettierd" },
+			css = { "prettierd" },
+			javascript = { "prettierd" },
+			typescript = { "prettierd" },
+			typescriptreact = { "prettierd" },
 		},
 	},
 }

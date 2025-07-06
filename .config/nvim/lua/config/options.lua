@@ -1,6 +1,6 @@
 local opt = vim.opt
 
-opt.guifont = "SFMono Nerd Font"
+opt.guifont = "MonoLisa"
 opt.wrap = true
 opt.conceallevel = 1
 opt.cursorline = false
@@ -20,4 +20,6 @@ opt.termguicolors = true
 opt.swapfile = false
 opt.cinoptions:append(":0")
 opt.background = "dark"
+-- opt.background = "light"
 -- opt.colorcolumn = "80"
+vim.diagnostic.config({ virtual_text = { current_line = true } })

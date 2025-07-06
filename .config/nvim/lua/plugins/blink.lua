@@ -1,6 +1,7 @@
 return {
 	"saghen/blink.cmp",
-	dependencies = "rafamadriz/friendly-snippets",
 	version = "*",
-	opts = {},
+	opts = {
+		signature = { enabled = true, window = { show_documentation = true } },
+	},
 }
