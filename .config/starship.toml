@@ -6,30 +6,41 @@ $git_branch\
 $git_state\
 $git_status\
 $git_metrics\
+$cpp\
+$golang\
+$nodejs\
 $fill\
 $line_break\
 $character\
 """
 add_newline = false
 
+[username]
+style_user = "yellow bold"
+style_root = "purple bold"
+format = "[$user]($style)▻ "
+disabled = false
+show_always = false
+
 [fill]
 symbol = " "
 
 [directory]
-style = "blue"
+home_symbol = "⌂"
 read_only = " "
+style = "bright-blue"
 
 [character]
 format = "$symbol "
-success_symbol = "[󰜴](blue)"
-error_symbol = "[󰜴](red)"
-vicmd_symbol = "[󰜴](green)"
+success_symbol = "[●](bright-green)"
+error_symbol = "[●](red)"
+vicmd_symbol = "[◆](blue)"
 
 [git_branch]
-symbol = " "
-format = 'on [$symbol$branch(:$remote_branch)]($style) '
+symbol = "[](green)"
+format = '[$symbol $branch(:$remote_branch)]($style) '
 ignore_branches=[]
-style = "bold purple"
+style = "green"
 
 [git_status]
 format = '([\[$all_status$ahead_behind\]]($style) )'
@@ -41,3 +52,15 @@ style = "bright-black"
 
 [git_metrics]
 disabled = false
+
+[cpp]
+disabled = false
+format = 'via [$name $version]($style)'
+
+[golang]
+format = 'via [🏎💨 $version](bold cyan) '
+
+[nodejs]
+format = "node [◫ ($version)]( bright-green) "
+detect_files = ["package.json"]
+version_format = "$major.$minor"
