@@ -3,17 +3,6 @@ return {
 	event = "VeryLazy",
 
 	config = function()
-		local theme = function()
-			local colors = {
-				black = "#151515",
-				white = "#ffffff",
-			}
-			return {
-				normal = {
-					a = { bg = colors.black, fg = colors.white, gui = "bold" },
-				},
-			}
-		end
 		local clients_lsp = function()
 			local clients = vim.lsp.get_clients()
 			if next(clients) == nil then
@@ -26,19 +15,19 @@ return {
 			return table.concat(c, "|")
 		end
 
-		local location = function()
+		local showLines = function()
 			local currentLine = vim.fn.line(".")
 			local totalLine = vim.fn.line("$")
-			return currentLine .. " of " .. totalLine
+			return currentLine .. ":" .. totalLine
 		end
 
 		local mode = function()
-			return string.upper(string.sub(vim.api.nvim_get_mode().mode, 1, 3))
+			return string.upper(string.sub(vim.api.nvim_get_mode().mode, 1, 1))
 		end
 
 		require("lualine").setup({
 			options = {
-				theme = theme(),
+				theme = "auto",
 				icons_enabled = false,
 				component_separators = { left = "", right = "" },
 				section_separators = { left = "", right = "" },
@@ -59,14 +48,12 @@ return {
 				lualine_x = {
 					{
 						"diagnostics",
-						symbols = { error = " ", warn = " ", info = " ", hint = " " },
+						symbols = { error = " ", warn = "  ", info = "  ", hint = " " },
 						update_in_insert = true,
 					},
 				},
 				lualine_y = { clients_lsp },
-				lualine_z = {
-					{ location },
-				},
+				lualine_z = { showLines },
 			},
 		})
 	end,
