@@ -2,28 +2,24 @@ vim.g.mapleader = " "
 vim.g.maplocalleader = " "
 
 vim.keymap.set("n", "<Esc>", "<cmd>nohlsearch<CR>")
-
--- [ using folke's snacks plugin for this ]
--- vim.keymap.set("n", "[d", vim.diagnostic.goto_prev, { desc = "Go to previous [D]iagnostic message" })
--- vim.keymap.set("n", "]d", vim.diagnostic.goto_next, { desc = "Go to next [D]iagnostic message" })
-vim.keymap.set("n", "<leader>q", vim.diagnostic.setloclist, { desc = "Open diagnostic [Q]uickfix list" })
-
--- [ using a plugin for this ]
---vim.keymap.set("n", "<C-h>", "<C-w><C-h>", { desc = "Move focus to the left window" })
---vim.keymap.set("n", "<C-l>", "<C-w><C-l>", { desc = "Move focus to the right window" })
---vim.keymap.set("n", "<C-j>", "<C-w><C-j>", { desc = "Move focus to the lower window" })
---vim.keymap.set("n", "<C-k>", "<C-w><C-k>", { desc = "Move focus to the upper window" })
+vim.keymap.set("n", "<leader>q", vim.diagnostic.setqflist, { desc = "Open diagnostic [Q]uickfix list" })
 
 -- Helix inspired remaps
 vim.keymap.set("n", "gh", "0", { noremap = true, silent = true })
 vim.keymap.set("n", "gl", "$", { noremap = true, silent = true })
 vim.keymap.set("n", "U", "<C-r>", { noremap = true, silent = true })
 
--- now using folke's snacks plugin for this
--- vim.keymap.set("n", "<leader>th", "<CMD>Telescope colorscheme<CR>", { desc = "colorschemes" })
+-- bind format to a keymap
+vim.api.nvim_create_user_command("FormatBuffer", function(args)
+	local range = nil
+	if args.count ~= -1 then
+		local end_line = vim.api.nvim_buf_get_lines(0, args.line2 - 1, args.line2, true)[1]
+		range = {
+			start = { args.line1, 0 },
+			["end"] = { args.line2, end_line:len() },
+		}
+	end
+	require("conform").format({ async = true, lsp_format = "fallback", range = range })
+end, { range = true })
 
--- escape remap [ i have remapped esc to capslock using keyd ]
--- vim.keymap.set("i", "jj", "<Esc>", { desc = "go to normal mode from insert mode" })
--- vim.keymap.set("v", "jk", "<Esc>", { desc = "go to normal mode from visual mode" })
-
--- vim.keymap.set("n", "gd", ":vsplit | lua vim.lsp.buf.defination()<CR>")
+vim.keymap.set({"n", "v"},"<leader>cf", "<cmd>FormatBuffer<cr>", {desc = "Format File"})
