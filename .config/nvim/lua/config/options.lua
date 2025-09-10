@@ -1,25 +1,41 @@
-local opt = vim.opt
+-- UX
+vim.opt.number = true
+vim.opt.wrap = true
+vim.opt.relativenumber = true
+vim.opt.hlsearch = true
+vim.opt.incsearch = true
+vim.opt.scrolloff = 4
+vim.opt.clipboard = "unnamedplus"
+vim.opt.inccommand = "split"
+vim.opt.swapfile = false
 
-opt.guifont = "MonoLisa"
-opt.wrap = true
-opt.conceallevel = 1
-opt.cursorline = false
-opt.relativenumber = true
-opt.hlsearch = false
-opt.incsearch = true
-opt.scrolloff = 4
-opt.clipboard = "unnamedplus"
-opt.breakindent = true
-opt.inccommand = "split"
+-- UI settings
+vim.opt.background = "dark"
+vim.opt.cursorline = false
+vim.opt.guifont = "MonoLisa"
+vim.opt.termguicolors = true
+vim.opt.winborder = "rounded"
 
-opt.tabstop = 4
-opt.softtabstop = 4
-opt.shiftwidth = 4
-opt.expandtab = true
-opt.termguicolors = true
-opt.swapfile = false
-opt.cinoptions:append(":0")
-opt.background = "dark"
--- opt.background = "light"
--- opt.colorcolumn = "80"
-vim.diagnostic.config({ virtual_text = { current_line = true } })
+-- Search settings
+vim.opt.ignorecase = true
+vim.opt.smartcase = true
+
+-- Indent settings
+vim.opt.breakindent = true
+vim.opt.expandtab = true
+vim.opt.shiftwidth = 2
+vim.opt.smartindent = true
+vim.opt.tabstop = 2
+
+vim.diagnostic.config({
+	virtual_text = { current_line = true },
+	float = { border = "rounded" },
+	signs = {
+		text = {
+			[vim.diagnostic.severity.ERROR] = " ",
+			[vim.diagnostic.severity.WARN] = " ",
+			[vim.diagnostic.severity.HINT] = " ",
+			[vim.diagnostic.severity.INFO] = " ",
+		},
+	},
+})
