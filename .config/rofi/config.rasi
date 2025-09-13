@@ -1,0 +1,9 @@
+configuration {
+  display-drun: "Applications:";
+  display-window: "Windows:";
+  drun-display-format: "{icon} {name}";
+  font: "JetbrainsMono Nerd Font 09";
+  show-icons: true;
+}
+
+@theme "themes/catppuccin.rasi"

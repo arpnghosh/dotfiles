@@ -15,7 +15,6 @@
         "hyprland/window"
     ],
     "modules-right": [
-        "hyprland/language",
         "cpu",
         "memory",
         "temperature",
@@ -26,21 +25,8 @@
     "hyprland/workspaces": {
         "disable-scroll": true,
         "on-click": "activate",
-        // "all-outputs": false,
-        // "format": "{name}: {icon}",
-        "format": "{name}",
         "on-scroll-up": "hyprctl dispatch workspace m-1 > /dev/null",
         "on-scroll-down": "hyprctl dispatch workspace m+1 > /dev/null",
-        "format-icons": {
-            "1": "",
-            "2": "",
-            "3": "",
-            "4": "",
-            "5": "",
-            "urgent": "",
-            "focused": "",
-            "default": ""
-        }
     },
     "wlr/taskbar": {
         "format": "{icon}",
@@ -51,10 +37,6 @@
         "max-length": 40,
         "separate-outputs": true
     },
-    "hyprland/language": {
-        "format": "{}",
-        "max-length": 18
-    },
     "tray": {
         // "icon-size": 21,
         "spacing": 0
@@ -64,17 +46,14 @@
         "format-alt": "{:%Y-%m-%d}"
     },
     "cpu": {
-        "format": "{usage}% ",
+        "format": "{usage}%  ",
         "tooltip": false
     },
     "memory": {
-        "format": "{}% "
+        "format": "{}%  "
     },
     "temperature": {
-        // "thermal-zone": 2,
-        // "hwmon-path": "/sys/class/hwmon/hwmon2/temp1_input",
         "critical-threshold": 80,
-        // "format-critical": "{temperatureC}°C {icon}",
         "format": "{temperatureC}°C {icon}",
         "format-icons": [
             "",
@@ -105,21 +84,21 @@
         },
         "format": "{capacity}% {icon}",
         "format-charging": "{capacity}% 🗲",
-        "format-plugged": "{capacity}% ",
+        "format-plugged": "{capacity}%  ",
         "format-alt": "{time} {icon}",
         // "format-good": "", // An empty format will hide the module
         // "format-full": "",
         "format-icons": [
-            "",
-            "",
-            "",
-            "",
-            ""
+            " ",
+            " ",
+            " ",
+            " ",
+            " "
         ]
     },
     "network": {
         "interface": "wlan0", // (Optional) To force the use of this interface
-        "format-wifi": "{essid} ",
+        "format-wifi": "{essid}  ",
         "format-ethernet": "{ipaddr}/{cidr} ",
         "tooltip-format": "{ifname} via {gwaddr} ",
         "format-linked": "{ifname} (No IP) ",

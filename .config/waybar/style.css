@@ -1,19 +1,19 @@
-@define-color base00 #161616;
-@define-color base01 #2b2e37;
-@define-color base02 #3b3e47;
-@define-color base03 #585858;
-@define-color base04 #b8b8b8;
-@define-color base05 #d8d8d8;
-@define-color base06 #e8e8e8;
-@define-color base07 #f8f8f8;
-@define-color base08 #ab4642;
-@define-color base09 #dc9656;
-@define-color base0A #f7ca88;
-@define-color base0B #a1b56c;
-@define-color base0C #86c1b9;
-@define-color base0D #7cafc2;
-@define-color base0E #ba8baf;
-@define-color base0F #a16946;
+@define-color base00 #1e1e2e;
+@define-color base01 #181825;
+@define-color base02 #313244;
+@define-color base03 #45475a;
+@define-color base04 #585b70;
+@define-color base05 #cdd6f4;
+@define-color base06 #f5e0dc;
+@define-color base07 #b4befe;
+@define-color base08 #f38ba8;
+@define-color base09 #fab387;
+@define-color base0A #f9e2af;
+@define-color base0B #a6e3a1;
+@define-color base0C #94e2d5;
+@define-color base0D #89b4fa;
+@define-color base0E #cba6f7;
+@define-color base0F #f2cdcd;
 
 * {
   transition: none;
@@ -21,10 +21,10 @@
 }
 
 #waybar {
-  font-family: "Source Code Pro", sans-serif;
+  font-family: "JetBrainsMono Nerd Font";
   font-size: 1.2em;
   font-weight: 400;
-  color: @base04;
+  color: @base07;
   background: @base00;
 }
 
