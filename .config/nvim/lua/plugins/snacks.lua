@@ -1,16 +1,19 @@
 return {
 	"folke/snacks.nvim",
+  enabled = not vim.g.vscode,
 	priority = 1000,
 	lazy = false,
 	---@type snacks.Config
 	opts = {
 		explorer = { enabled = true },
 		indent = { enabled = true,},
+    zen = { enabled = true,},
 		picker = {
 			enabled = true,
 			exclude = {
 				".git",
 				"node_modules",
+        "public"
 			},
 		},
 		quickfile = { enabled = false },
@@ -78,5 +81,8 @@ return {
     { "gy", function() Snacks.picker.lsp_type_definitions() end, desc = "Goto T[y]pe Definition" },
     { "<leader>ss", function() Snacks.picker.lsp_symbols() end, desc = "LSP Symbols" },
     { "<leader>sS", function() Snacks.picker.lsp_workspace_symbols() end, desc = "LSP Workspace Symbols" },
+
+    -- Other 
+    { "<leader>z",  function() Snacks.zen() end, desc = "Toggle Zen Mode" },
   },
 }

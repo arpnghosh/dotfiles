@@ -1,8 +1,55 @@
 local active_colorscheme = "catppuccin"
 
+if active_colorscheme == "gruvboxbaby" then
+  vim.cmd("colorscheme gruvboxbaby")
+end
+
 return {
+	{ "rose-pine/neovim" },
 	{
-		"rose-pine/neovim",
+		"nuvic/flexoki-nvim",
+		name = "flexoki",
+		enabled = true,
+		priority = 1000,
+		---@return Options
+		opts = function()
+			local palette = require("flexoki.palette")
+			return {
+				styles = {
+					italic = true,
+				},
+				highlight_groups = {
+					["@variable"] = { fg = palette.text, italic = false },
+					["@parameter"] = { fg = palette.purple_two, italic = false },
+					["@variable.parameter"] = { fg = palette.purple_two, italic = false },
+					-- normal colorscheme
+					StatusLine = { fg = palette.orange_two, bg = palette.overlay },
+					StatusLineNC = { bg = palette.overlay },
+					QuickFixLine = { bg = palette.highlight_high },
+					Winbar = { bg = palette.base },
+					WinbarNC = { bg = palette.base },
+				},
+			}
+		end,
+		config = function(_, opts)
+			require("flexoki").setup(opts)
+			if active_colorscheme == "flexoki" then
+				vim.cmd("colorscheme flexoki")
+			end
+		end,
+	},
+	{
+		"EdenEast/nightfox.nvim",
+		config = function()
+			require("nightfox").setup({
+				options = {
+					transparent = true,
+				},
+			})
+			if active_colorscheme == "carbonfox" then
+				vim.cmd("colorscheme carbonfox")
+			end
+		end,
 	},
 	{
 		"ellisonleao/gruvbox.nvim",
@@ -70,7 +117,7 @@ return {
 					light = "lotus",
 				},
 			})
-			if active_colorscheme == "gruvbox" then
+			if active_colorscheme == "kanagawa" then
 				vim.cmd("colorscheme kanagawa")
 			end
 		end,
@@ -98,18 +145,22 @@ return {
 				end,
 				color_overrides = {
 					mocha = {
-						base = "#000000",
-						mantle = "#000000",
+						base = "#11111b",
+						mantle = "#11111b",
 					},
 				},
 				integrations = {
+					barbecue = { dim_dirname = true, bold_basename = true, dim_context = false, alt_background = false },
+					gitsigns = true,
+					markdown = true,
+					mason = true,
+					native_lsp = { enabled = true, inlay_hints = { background = true } },
+					neogit = true,
 					blink_cmp = {
 						style = "bordered",
 					},
-					gitsigns = true,
-					mason = true,
-					nvim_surround = true,
 					treesitter = true,
+					treesitter_context = true,
 					which_key = true,
 				},
 			})
@@ -124,7 +175,7 @@ return {
 		config = function()
 			local cmds = {
 				"let g:gruvbox_material_background = 'hard'",
-				"let g:gruvbox_material_transparent_background = 0",
+				"let g:gruvbox_material_transparent_background = 1",
 				"let g:gruvbox_material_diagnostic_line_highlight = 1",
 				"let g:gruvbox_material_diagnostic_virtual_text = 'colored'",
 				"let g:gruvbox_material_enable_bold = 0",
@@ -133,7 +184,7 @@ return {
 			for _, cmd in ipairs(cmds) do
 				vim.cmd(cmd)
 			end
-			if active_colorscheme == "gruvbox" then
+			if active_colorscheme == "gruvbox-material" then
 				vim.cmd("colorscheme gruvbox-material")
 			end
 		end,
