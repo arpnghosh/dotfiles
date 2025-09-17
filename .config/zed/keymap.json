@@ -1,0 +1,12 @@
+[
+  {
+    "context": "Workspace",
+    "bindings": {}
+  },
+  {
+    "context": "Editor",
+    "bindings": {
+      "ctrl-e": "workspace::ToggleLeftDock"
+    }
+  }
+]

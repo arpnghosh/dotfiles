@@ -1,0 +1,53 @@
+{
+  "icon_theme": "Material Icon Theme",
+  "tab_size": 2,
+  "vim_mode": true,
+  "ui_font_size": 15,
+  "buffer_font_family": "Lilex",
+  "buffer_font_size": 20,
+  "theme": {
+    "mode": "dark",
+    "light": "Catppuccin Latte - No Italics",
+    "dark": "One Dark Pro"
+  },
+  "current_line_highlight": "none",
+  "cursor_shape": "bar",
+  "selection_highlight": true,
+  "cursor_blink": false,
+  "hide_mouse": "on_typing_and_movement",
+  "scrollbar": {
+    "show": "never",
+    "git_diff": true
+  },
+  "disable_ai": true,
+  "format_on_save": "on",
+  "file_scan_exclusions": [
+    "**/.git",
+    "**/.svn",
+    "**/.hg",
+    "**/.jj",
+    "**/CVS",
+    "**/.DS_Store",
+    "**/Thumbs.db",
+    "**/.classpath",
+    "**/.settings"
+  ],
+  "ensure_final_newline_on_save": true,
+  "experimental.theme_overrides": {
+    // "editor.background": "#000000",
+    // "terminal.background": "#000000",
+    // "tab_bar.background": "#000000",
+    // "tab.active_background": "#000000",
+    // "tab.inactive_background": "#000000",
+    // "panel.background": "#000000",
+    // "status_bar.background": "#000000",
+    // "toolbar.background": "#000000",
+    // "editor.gutter.background": "#000000",
+
+    "editor.document_highlight.bracket_background": "#ffffff00",
+    "editor.active_line.background": "#ffffff00",
+    "editor.document_highlight.read_background": "#00000000",
+    "editor.document_highlight.write_background": "#00000000"
+  },
+  "soft_wrap": "editor_width"
+}
