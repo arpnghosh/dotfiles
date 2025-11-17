@@ -1,29 +1,26 @@
-theme = catppuccin-mocha
-# background = 11111B
-cursor-text = 11111B
-adjust-cell-height = 20%
+theme = Catppuccin Mocha
+background = #000000
 
-font-family = "Iosevka Term"
-font-size = 18
+font-family = "JetBrainsMono Nerd Font"
+font-size = 14
 
 shell-integration = fish
-
 cursor-style = block
 gtk-titlebar = true
 gtk-wide-tabs = false
 window-height = 9999
 window-width = 9999
 window-theme = "dark"
-window-padding-x = 5,5
+window-padding-x = 0,0
 window-decoration = true
 window-padding-balance = true
 macos-titlebar-style = "hidden"
 mouse-hide-while-typing = true
 
-# keybind = ctrl+shift+j=goto_split:bottom
-# keybind = ctrl+shift+k=goto_split:top
-# keybind = ctrl+shift+h=goto_split:left
-# keybind = ctrl+shift+l=goto_split:right
+keybind = ctrl+shift+j=goto_split:bottom
+keybind = ctrl+shift+k=goto_split:top
+keybind = ctrl+shift+h=goto_split:left
+keybind = ctrl+shift+l=goto_split:right
 
-# keybind = ctrl+s>v=new_split:right
-# keybind = ctrl+s>x=new_split:down
+keybind = ctrl+s>v=new_split:right
+keybind = ctrl+s>x=new_split:down

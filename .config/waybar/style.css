@@ -1,3 +1,4 @@
+/* @define-color baset @transparent; */
 @define-color base00 #1e1e2e;
 @define-color base01 #181825;
 @define-color base02 #313244;
@@ -38,8 +39,7 @@
   color: @base05;
 }
 
-#workspaces button.visible {
-}
+#workspaces button.visible {}
 
 #workspaces button.active {
   border-radius: 4px;

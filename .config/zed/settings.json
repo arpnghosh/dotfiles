@@ -1,14 +1,22 @@
 {
+  "disable_ai": false,
+  "agent": {
+    "default_model": {
+      "provider": "zed.dev",
+      "model": "claude-3-5-sonnet"
+    },
+    "default_profile": "write"
+  },
   "icon_theme": "Material Icon Theme",
   "tab_size": 2,
   "vim_mode": true,
   "ui_font_size": 15,
-  "buffer_font_family": "Lilex",
-  "buffer_font_size": 20,
+  "buffer_font_family": "JetBrainsMono Nerd Font Propo",
+  "buffer_font_size": 15,
   "theme": {
     "mode": "dark",
     "light": "Catppuccin Latte - No Italics",
-    "dark": "One Dark Pro"
+    "dark": "Tokyo Night"
   },
   "current_line_highlight": "none",
   "cursor_shape": "bar",
@@ -19,7 +27,6 @@
     "show": "never",
     "git_diff": true
   },
-  "disable_ai": true,
   "format_on_save": "on",
   "file_scan_exclusions": [
     "**/.git",
@@ -43,7 +50,6 @@
     // "status_bar.background": "#000000",
     // "toolbar.background": "#000000",
     // "editor.gutter.background": "#000000",
-
     "editor.document_highlight.bracket_background": "#ffffff00",
     "editor.active_line.background": "#ffffff00",
     "editor.document_highlight.read_background": "#00000000",

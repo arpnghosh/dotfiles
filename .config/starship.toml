@@ -58,7 +58,7 @@ disabled = false
 format = 'via [$name $version]($style)'
 
 [golang]
-format = 'via [🏎💨 $version](bold cyan) '
+format = 'via [🐹 $version](bold cyan) '
 
 [nodejs]
 format = "node [◫ ($version)]( bright-green) "

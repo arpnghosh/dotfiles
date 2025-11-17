@@ -4,6 +4,10 @@ SETUVAR --export --path LUA_CPATH:/usr/local/lib/lua/5\x2e4/\x3f\x2eso\x3b\x3b
 SETUVAR --export --path LUA_PATH:/usr/local/share/lua/5\x2e4/\x3f\x2elua\x3b/usr/local/share/lua/5\x2e4/\x3f/init\x2elua\x3b\x3b
 SETUVAR --export --path PATH:/usr/local/lib/luarocks/rocks\x2d5\x2e4/tl/0\x2e24\x2e4\x2d1/bin/tl\x1e/home/awaki/\x2econfig/emacs/bin\x1e/usr/local/sbin\x1e/usr/local/bin\x1e/usr/bin\x1e/var/lib/flatpak/exports/bin\x1e/usr/bin/site_perl\x1e/usr/bin/vendor_perl\x1e/usr/bin/core_perl\x1e/home/awaki/\x2elocal/share/nvm/v20\x2e12\x2e0/bin\x1efish_user_paths\x1e/home/awaki/\x2ecargo/bin\x1e/home/awaki/\x2elocal/share/nvm/v20\x2e12\x2e0/bin\x1efish_user_paths\x1e/home/awaki/\x2ecargo/bin
 SETUVAR __fish_initialized:3800
+SETUVAR _fisher_jorgebucaran_2F_fisher_files:\x7e/\x2econfig/fish/functions/fisher\x2efish\x1e\x7e/\x2econfig/fish/completions/fisher\x2efish
+SETUVAR _fisher_jorgebucaran_2F_nvm_2E_fish_files:\x7e/\x2econfig/fish/functions/_nvm_index_update\x2efish\x1e\x7e/\x2econfig/fish/functions/_nvm_list\x2efish\x1e\x7e/\x2econfig/fish/functions/_nvm_version_activate\x2efish\x1e\x7e/\x2econfig/fish/functions/_nvm_version_deactivate\x2efish\x1e\x7e/\x2econfig/fish/functions/nvm\x2efish\x1e\x7e/\x2econfig/fish/conf\x2ed/nvm\x2efish\x1e\x7e/\x2econfig/fish/completions/nvm\x2efish
+SETUVAR _fisher_plugins:jorgebucaran/fisher\x1ejorgebucaran/nvm\x2efish
+SETUVAR _fisher_upgraded_to_4_4:\x1d
 SETUVAR fish_color_autosuggestion:brblack
 SETUVAR fish_color_cancel:\x2dr
 SETUVAR fish_color_command:normal
