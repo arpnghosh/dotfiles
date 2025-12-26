@@ -36,4 +36,4 @@ SETUVAR fish_pager_color_description:yellow\x1e\x2di
 SETUVAR fish_pager_color_prefix:normal\x1e\x2d\x2dbold\x1e\x2d\x2dunderline
 SETUVAR fish_pager_color_progress:brwhite\x1e\x2d\x2dbackground\x3dcyan
 SETUVAR fish_pager_color_selected_background:\x2dr
-SETUVAR --export fish_user_paths:/home/awaki/\x2econfig/emacs/bin
+SETUVAR --export fish_user_paths:/home/awaki/go/bin\x1e/home/awaki/\x2ebun/bin\x1e/home/awaki/\x2elocal/bin\x1e/home/awaki/\x2ecargo/bin\x1e/home/awaki/\x2eopencode/bin\x1e/home/awaki/\x2econfig/emacs/bin

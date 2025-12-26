@@ -2,8 +2,9 @@ set fish_greeting
 
 starship init fish | source
 
+# Aliases
 alias v nvim
-alias z zeditor
+alias z zed
 alias y yazi
 
 alias ls 'eza --icons'
@@ -16,55 +17,38 @@ alias tc 'tmux -u new-session -t'
 alias ta 'tmux -u attach-session -t'
 
 alias nifi 'nmcli device wifi connect'
-
 alias sync-notes '~/Documents/notes/sync-notes.sh'
 
-# function vv
-#      set selected_dir (cd ~/Documents/code && ls -d */ | fzf)
-#      if test -n "$selected_dir"
-#          cd ~/Documents/code/$selected_dir; and nvim .
-#      end
-# end
-
-alias vv 'cd (cd ~/Documents/code && ls -d */ | fzf) && nvim .'
-alias zz 'cd (cd ~/Documents/code && ls -d */ | fzf) && zeditor .'
-
-fish_vi_key_bindings
-# Set cursor style based on vi mode
-function fish_vi_cursor --on-variable fish_bind_mode
-    switch $fish_bind_mode
-        case default
-            echo -en "\e[2 q" # block cursor
-        case insert
-            echo -en "\e[6 q" # line cursor
-        case visual
-            echo -en "\e[2 q" # block cursor
-    end
+# Functions
+function vv
+    set dir (cd ~/Documents/code && ls -d */ | fzf)
+    [ -n "$dir" ] && cd ~/Documents/code/$dir && nvim .
 end
 
-# nvm
-set PATH $PATH $HOME/.local/share/nvm/v20.12.0/bin
-set PATH $PATH fish_user_paths $HOME/.cargo/bin
-set -Ux fish_user_paths $HOME/.local/bin $fish_user_paths
-
-# emacs
-set -Ux fish_user_paths $HOME/.config/emacs/bin
-
-# lua
-set -Ux LUA_PATH "/usr/local/share/lua/5.4/?.lua;/usr/local/share/lua/5.4/?/init.lua;;"
-set -Ux LUA_CPATH "/usr/local/lib/lua/5.4/?.so;;"
-
-# bun
-set --export BUN_INSTALL "$HOME/.bun"
-set --export PATH $BUN_INSTALL/bin $PATH
-
-# go
-set -x GOPATH $HOME/go
-set -x PATH $PATH $GOPATH/bin
-
-# pnpm
-set -gx PNPM_HOME "/home/awaki/.local/share/pnpm"
-if not string match -q -- $PNPM_HOME $PATH
-  set -gx PATH "$PNPM_HOME" $PATH
+function zz
+    set dir (cd ~/Documents/code && ls -d */ | fzf)
+    [ -n "$dir" ] && cd ~/Documents/code/$dir && zed .
 end
-# pnpm end
+
+# PATH Setup
+fish_add_path $HOME/.local/share/nvm/v20.12.0/bin
+fish_add_path $HOME/.cargo/bin
+fish_add_path $HOME/.local/bin
+fish_add_path $HOME/.config/emacs/bin
+fish_add_path $HOME/.bun/bin
+fish_add_path $HOME/go/bin
+fish_add_path /home/awaki/.opencode/bin
+
+# Environment Variables - Node/Bun
+set -gx BUN_INSTALL "$HOME/.bun"
+
+# Environment Variables - Go
+set -gx GOPATH $HOME/go
+
+# Environment Variables - Lua
+set -gx LUA_PATH "/usr/local/share/lua/5.4/?.lua;/usr/local/share/lua/5.4/?/init.lua;;"
+set -gx LUA_CPATH "/usr/local/lib/lua/5.4/?.so;;"
+
+# Environment Variables - pnpm
+set -gx PNPM_HOME "$HOME/.local/share/pnpm"
+string match -q -- $PNPM_HOME $PATH || set -gx PATH "$PNPM_HOME" $PATH
