@@ -4,6 +4,9 @@ vim.g.maplocalleader = " "
 vim.keymap.set("n", "<Esc>", "<cmd>nohlsearch<CR>")
 vim.keymap.set("n", "<leader>q", vim.diagnostic.setqflist, { desc = "Open diagnostic [Q]uickfix list" })
 
+vim.keymap.set("n", "<Tab>", ":bnext<CR>", {silent = true})
+vim.keymap.set("n", "<S-Tab>", ":bprev<CR>", {silent = true})
+
 -- Helix inspired remaps
 vim.keymap.set("n", "gh", "0", { noremap = true, silent = true })
 vim.keymap.set("n", "gl", "$", { noremap = true, silent = true })

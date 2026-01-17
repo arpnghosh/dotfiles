@@ -8,13 +8,15 @@ vim.opt.scrolloff = 4
 vim.opt.clipboard = "unnamedplus"
 vim.opt.inccommand = "split"
 vim.opt.swapfile = false
+vim.opt.undofile = true
 
 -- UI settings
 vim.opt.background = "dark"
-vim.opt.cursorline = false
-vim.opt.guifont = "MonoLisa"
+vim.opt.cursorline = true
+vim.opt.guifont = "Iosekva Term"
 vim.opt.termguicolors = true
 vim.opt.winborder = "rounded"
+vim.cmd("colorscheme gruvboxbaby")
 
 -- Search settings
 vim.opt.ignorecase = true

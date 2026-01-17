@@ -7,12 +7,17 @@ return {
 		end,
 	},
 	{
-		{
-			"echasnovski/mini.pairs",
-			version = false,
-			config = function()
-				require("mini.pairs").setup()
-			end,
-		},
+		"echasnovski/mini.pairs",
+		version = false,
+		config = function()
+			require("mini.pairs").setup()
+		end,
+	},
+	{
+		"echasnovski/mini.tabline",
+		version = false,
+		config = function()
+			require("mini.tabline").setup()
+		end,
 	},
 }
