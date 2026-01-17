@@ -1,8 +1,8 @@
-background-opacity = 0.95
-background-blur-radius = 20
+background = #090f17
+unfocused-split-opacity = 1
 
-font-family = "JetBrainsMono Nerd Font"
-font-size = 14
+font-family = "Iosevka Term"
+font-size = 18
 
 gtk-titlebar = true
 gtk-wide-tabs = true
@@ -17,7 +17,6 @@ keybind = ctrl+shift+l=goto_split:right
 mouse-hide-while-typing = true
 shell-integration = fish
 
-theme = Zenbones Dark
-
 window-decoration = true
 
+theme = Gruvbox Dark

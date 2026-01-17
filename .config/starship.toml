@@ -1,33 +1,48 @@
-format = "$directory$all"
+format = """
+$directory\
+$git_branch\
+$git_state\
+$git_status\
+$git_metrics\
+$cpp\
+$golang\
+$nodejs\
+$fill\
+$line_break\
+$character\
+"""
+add_newline = false
 
-scan_timeout = 5
-command_timeout = 500
-
-[character]
-error_symbol = "[󰘧](bold red)"
-success_symbol = "[󰘧](bold green)"
-vicmd_symbol = "[](bold yellow) "
+[fill]
+symbol = " "
 
 [directory]
-home_symbol = "~"
+home_symbol = "⌂"
 read_only = " "
 style = "bright-blue"
-truncate_to_repo = false
+
+[character]
+format = "$symbol "
+success_symbol = "[●](bright-green)"
+error_symbol = "[●](red)"
+vicmd_symbol = "[◆](blue)"
 
 [git_branch]
-disabled = false
-symbol = " "
-truncation_length = 18
+symbol = "[](green)"
+format = '[$symbol $branch(:$remote_branch)]($style) '
+ignore_branches=[]
+style = "green"
 
 [git_status]
-disabled = false
+format = '([\[$all_status$ahead_behind\]]($style) )'
+style = "cyan"
 
-[cpp]
+[git_state]
+format = '\([$state( $progress_current/$progress_total)]($style)\) '
+style = "bright-black"
+
+[git_metrics]
 disabled = false
 
 [golang]
-symbol = " "
-
-[nodejs]
-symbol = "◫ "
-
+format = 'via [ $version](bold cyan) '

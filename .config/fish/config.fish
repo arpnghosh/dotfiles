@@ -12,6 +12,8 @@ alias la 'eza -a --icons'
 alias ll 'eza -l --icons'
 alias lla 'eza -la --icons'
 
+alias zd 'cd (ls -d */ | gum filter)'
+
 alias ts 'tmux ls'
 alias tc 'tmux -u new-session -t'
 alias ta 'tmux -u attach-session -t'
@@ -21,13 +23,18 @@ alias sync-notes '~/Documents/notes/sync-notes.sh'
 
 # Functions
 function vv
-    set dir (cd ~/Documents/code && ls -d */ | fzf)
+    set dir (cd ~/Documents/code && ls -d */ | gum filter --placeholder 'pick a directory to open in neovim')
     [ -n "$dir" ] && cd ~/Documents/code/$dir && nvim .
 end
 
 function zz
-    set dir (cd ~/Documents/code && ls -d */ | fzf)
+    set dir (cd ~/Documents/code && ls -d */ | gum filter --placeholder 'pick a directory to open in zed')
     [ -n "$dir" ] && cd ~/Documents/code/$dir && zed .
+end
+
+function mkcd
+    set dir $argv[1]
+    mkdir $dir && cd $dir
 end
 
 # PATH Setup
