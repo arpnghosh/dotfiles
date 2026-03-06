@@ -1,30 +1,29 @@
-#!/bin/bash
 
-options="⏻ Shutdown\n⏾ Suspend\n🔄 Reboot\n⚡ Hibernate\n🔒 Lock Screen\n🚪 Logout"
+#!/usr/bin/env bash
 
-chosen=$(echo -e "$options" | rofi -dmenu -i -p "Power Menu" \
-    -theme-str 'listview {lines: 6;}')
+options="Lock Screen
+Logout
+Reboot
+Shutdown"
 
-case $chosen in
-    "⏻ Shutdown")
-        systemctl poweroff
+chosen=$(printf "%s\n" "$options" | rofi -dmenu -i -p "Power Menu" \
+    -theme-str 'listview { lines: 4; }')
+
+case "$chosen" in
+    "Lock Screen")
+        # dms ipc call lock lock
         ;;
-    "⏾ Suspend")
-        systemctl suspend
+    "Logout")
+        hyprctl dispatch exit
         ;;
-    "🔄 Reboot")
+    "Reboot")
         systemctl reboot
         ;;
-    "⚡ Hibernate")
-        systemctl hibernate
-        ;;
-    "🔒 Lock Screen")
-        hyprlock
-        ;;
-    "🚪 Logout")
-        hyprctl dispatch exit
+    "Shutdown")
+        systemctl poweroff
         ;;
     *)
         exit 0
         ;;
 esac
+

@@ -5,7 +5,7 @@ rofiConfig="$HOME/.config/rofi/themes"
 
 options="Clipboard\nRegion\nWindow\nMonitor"
 choice=$(echo -e "$options" | rofi -dmenu -i -p "Screenshot Option:" \
--theme-str 'listview {lines: 6;}')
+-theme-str 'listview {lines: 4;}')
 
 case $choice in
     "Region")
