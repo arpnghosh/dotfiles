@@ -1,7 +1,3 @@
-return {
-	"norcalli/nvim-colorizer.lua",
-	event = { "BufReadPost", "BufNewFile", "BufWritePre" },
-	config = function()
-		require("colorizer").setup()
-	end,
-}
+vim.pack.add({ "https://github.com/norcalli/nvim-colorizer.lua" })
+
+require("colorizer").setup()

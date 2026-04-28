@@ -13,10 +13,10 @@ vim.opt.undofile = true
 -- UI settings
 vim.opt.background = "dark"
 vim.opt.cursorline = true
-vim.opt.guifont = "Iosekva Term"
+vim.opt.guifont = "Iosevka Term"
 vim.opt.termguicolors = true
 vim.opt.winborder = "rounded"
-vim.cmd("colorscheme gruvboxbaby")
+vim.cmd.colorscheme("oceanbaby")
 
 -- Search settings
 vim.opt.ignorecase = true

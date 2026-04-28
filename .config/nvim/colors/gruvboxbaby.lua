@@ -12,8 +12,7 @@ local c = {
   comment = "#928374",
   dark0 = "#0d0e0f",
   dark = "#202020",
-  -- background = "#282828",
-  background = "#090f17",
+  background = "#0c0e0f",
   background_dark = "#1d2021",
   background_light = "#32302f",
   medium_gray = "#504945",
@@ -40,6 +39,7 @@ if transparent_mode then
   c.background_light = c.NONE
 end
 
+
 local theme = {
   NormalFloat = { fg = c.foreground, bg = c.background },
   Normal = { fg = c.foreground, bg = c.background },
@@ -57,7 +57,7 @@ local theme = {
   Repeat = { fg = c.magenta },
   Label = { fg = c.dark_gray },
   Operator = { fg = c.foreground },
-  Keyword = { fg = c.red, italic = false},
+  Keyword = { fg = c.red, italic = false },
   Exception = { fg = c.magenta },
   PreProc = { fg = c.soft_yellow },
   Include = { fg = c.red },
@@ -81,7 +81,7 @@ local theme = {
 
   TabLine = { bg = c.dark, fg = c.comment },
   TabLineFill = { bg = c.background },
-  TabLineSel = { bg = c.light_blue, fg = c.dark },
+  TabLineSel = { fg = c.foreground, bg = c.background_dark },
 
   DiffAdd = { bg = c.diff.add },
   DiffChange = { bg = c.diff.change },
@@ -90,7 +90,7 @@ local theme = {
 
   ErrorMsg = { fg = c.red },
   VertSplit = { fg = c.background_light },
-  Folded = { fg = "#928374", bg = "#3c3836", italic = true },
+  Folded = { fg = "#928374", bg = "#3c3836", italic = false},
   LineNr = { fg = c.medium_gray },
   MatchParen = { bg = c.diff.text, underline = true },
   NonText = { fg = c.comment },
@@ -122,7 +122,7 @@ local theme = {
   ["@boolean"] = { fg = c.orange },
   ["@define"] = { fg = c.red },
   ["@keyword.directive"] = { fg = c.red },
-  ["@comment"] = { fg = c.comment, italic = true },
+  ["@comment"] = { fg = c.comment, italic = false},
   ["@error"] = { fg = c.red },
   ["@punctuation.delimiter"] = { fg = c.foreground },
   ["@punctuation.bracket"] = { fg = c.foreground },
@@ -157,9 +157,9 @@ local theme = {
   ["@repeat"] = { fg = c.red },
   ["@keyword.repeat"] = { fg = c.red },
   ["@label"] = { fg = c.blue_gray },
-  ["@keyword"] = { fg = c.red, italic = true },
-  ["@keyword.return"] = { fg = c.red, italic = true },
-  ["@keyword.function"] = { fg = c.red, italic = true },
+  ["@keyword"] = { fg = c.red, italic = false},
+  ["@keyword.return"] = { fg = c.red, italic = false},
+  ["@keyword.function"] = { fg = c.red, italic = false},
   ["@keyword.operator"] = { fg = c.red },
   ["@operator"] = { fg = c.foreground },
   ["@exception"] = { fg = c.red },
@@ -174,14 +174,14 @@ local theme = {
   ["@variable.builtin"] = { fg = c.blue_gray },
   ["@text"] = { fg = c.soft_yellow },
   ["@text.strong"] = { fg = c.soft_yellow, bold = true },
-  ["@text.emphasis"] = { fg = c.soft_yellow, italic = true },
+  ["@text.emphasis"] = { fg = c.soft_yellow, italic = false},
   ["@text.underline"] = { fg = c.soft_yellow, underline = true },
   ["@text.strike"] = { fg = c.medium_gray, strikethrough = true },
   ["@text.title"] = { fg = c.soft_yellow },
   ["@text.literal"] = { fg = c.soft_yellow },
   ["@markup"] = { fg = c.soft_yellow },
   ["@markup.strong"] = { fg = c.soft_yellow, bold = true },
-  ["@markup.emphasis"] = { fg = c.soft_yellow, italic = true },
+  ["@markup.emphasis"] = { fg = c.soft_yellow, italic = false},
   ["@markup.underline"] = { fg = c.soft_yellow, underline = true },
   ["@markup.strike"] = { fg = c.medium_gray, strikethrough = true },
   ["@markup.heading"] = { fg = c.soft_yellow },

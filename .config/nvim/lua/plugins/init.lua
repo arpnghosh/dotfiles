@@ -1,0 +1,16 @@
+-- Load snacks first since the previous lazy spec used priority = 1000.
+require("plugins.snacks")
+
+require("plugins.color")
+require("plugins.blink")
+require("plugins.format")
+require("plugins.gitsigns")
+require("plugins.lsp")
+require("plugins.lualine")
+require("plugins.mini")
+require("plugins.neoscroll")
+require("plugins.oil")
+require("plugins.split")
+require("plugins.todo")
+require("plugins.treesitter")
+require("plugins.whichkey")

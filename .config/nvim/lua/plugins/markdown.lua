@@ -1,13 +1,15 @@
-return {
-	"MeanderingProgrammer/render-markdown.nvim",
-	opts = {
-		file_types = { "markdown" },
-		preset = "lazy",
-		code = {
-			language_icon = false,
-			language_name = false,
-			disable_background = true,
-		},
-	},
-	ft = { "markdown" },
-}
+-- render-markdown.nvim is currently disabled.
+-- To re-enable, uncomment below and call `require("plugins.markdown")` from
+-- lua/plugins/init.lua.
+--
+-- vim.pack.add({ "https://github.com/MeanderingProgrammer/render-markdown.nvim" })
+--
+-- require("render-markdown").setup({
+-- 	file_types = { "markdown" },
+-- 	preset = "lazy",
+-- 	code = {
+-- 		language_icon = false,
+-- 		language_name = false,
+-- 		disable_background = true,
+-- 	},
+-- })
